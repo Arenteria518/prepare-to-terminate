@@ -38,4 +38,5 @@ Rails.application.configure do
   config.assets.compile = true
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.action_mailer.default_url_options = { host: 'https://prepare-to-terminate-arenteria518.c9users.io/', port: 8080 }
 end
