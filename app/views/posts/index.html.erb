@@ -14,7 +14,7 @@
     
         <div class="col-md-4 card">
             <p class="date pull-right"><%= post.created_at.strftime("%B, %d, %Y") %></p>
-            <%= image_tag('http://placehold.it/1920x1080', :class => 'img-responsive') %>
+            <%= image_tag(post.image.url(:large), :class => 'img-responsive') %>
             <div class="info-card col-xs-10 col-xs-offset-1">
                 <h3 class="title"> <%= link_to post.title, post %> </h3>
                 <p><%= sanitize(truncate(post.body, length: 150)) %></p>
