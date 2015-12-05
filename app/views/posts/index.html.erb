@@ -1,6 +1,32 @@
-<% @posts.each do |post| %>
-<div class="post-wrapper">
-    <h2 class="title"> <%= link_to post.title, post %> </h2>
-    <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+
+<div class="container-fluid splash">
+    <div class="row">
+       <!-- <%= image_tag("http://placehold.it/1950x600", :class => 'img-responsive') %>-->
+    </div>
 </div>
-<% end %>
+
+<div class="container">
+    
+    <div class="pager"></div>
+    
+    <div class="row">
+    <% @posts.each do |post| %>
+    
+        <div class="col-md-4 card">
+            <p class="date pull-right"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+            <%= image_tag('http://placehold.it/1920x1080', :class => 'img-responsive') %>
+            <div class="info-card col-xs-10 col-xs-offset-1">
+                <h3 class="title"> <%= link_to post.title, post %> </h3>
+                <p><%= sanitize(truncate(post.body, length: 150)) %></p>
+                <div class="pull-right">
+                <%= link_to 'More', post, :class => 'button' %>
+                </div>
+            </div>
+            
+        </div>
+        
+    <% end %>
+    
+    </div>
+    
+</div>
