@@ -9,9 +9,11 @@
     
     <div class="pager"></div>
     
-    <div class="row">
-    <% @posts.each do |post| %>
     
+    <% @posts.each do |post| %>
+    <% if post.id % 3 == 0 %>
+        <div class="row">
+            <% end %>
         <div class="col-md-4 card">
             <p class="date pull-right"><%= post.created_at.strftime("%B, %d, %Y") %></p>
             <%= image_tag(post.image.url(:large), :class => 'img-responsive') %>
@@ -24,9 +26,9 @@
             </div>
             
         </div>
-        
+        <% if post.id % 3 == 0 %>
+        </div>
+            <% end %>
     <% end %>
-    
-    </div>
     
 </div>
