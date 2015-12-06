@@ -12,7 +12,6 @@
     <br>
     <br>
 </p>
-
 <p class="body">
-    <%= @post.body %>
+    <%=raw Markdown.new(@post.body).to_html %>
 </p>

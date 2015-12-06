@@ -29,6 +29,7 @@ gem 'devise'
 gem 'nokogiri', '1.6.7' 
 gem 'aws-sdk', '< 2.0'
 gem 'paperclip', '~> 4.2'
+gem 'redcarpet'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

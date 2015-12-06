@@ -1,15 +1,10 @@
-
 <div class="container-fluid splash">
     <div class="row">
        <!-- <%= image_tag("http://placehold.it/1950x600", :class => 'img-responsive') %>-->
     </div>
 </div>
-
 <div class="container">
-    
     <div class="pager"></div>
-    
-    
     <% @posts.each_slice(3) do |row| %>
     <div class="row">
         <% row.each do |post| %>
@@ -18,7 +13,7 @@
                     <%= link_to image_tag(post.image.url(:thumbnail), :class => 'img-responsive'), post %>
                     <div class="info-card col-xs-10 col-xs-offset-1">
                         <h3 class="title"> <%= link_to post.title, post %> </h3>
-                        <p><%= sanitize(truncate(post.body, length: 150)) %></p>
+                        <p><%=strip_tags post.body.truncate(300, separator: /\s/) %></p>
                         <div class="pull-right">
                         <%= link_to 'More', post, :class => 'button' %>
                         </div>
@@ -27,5 +22,4 @@
         <% end %>
         </div>
     <% end %>
-    
 </div>
