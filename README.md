@@ -16,9 +16,9 @@ Prepare to terminate is a Science Fiction blog created with Ruby on Rails.
 - bootstrap for mobile friendliness
 
 ####Features currently in production
+-  ~~vanity URLs for posts show page~~ 12/08/15
 - user privilege/restrictions on posting
 - comments for posts
 - endless scroll page
 - page footer
 - images to be upload and included in body section of posts. 
--  vanity URLs for posts show page
