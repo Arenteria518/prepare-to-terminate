@@ -10,7 +10,9 @@
         <% row.each do |post| %>
                 <div class="col-md-4 card clearfix">
                     <p class="date pull-right"><%= post.created_at.strftime("%B, %d, %Y") %></p>
-                    <%= link_to image_tag(post.image.url(:thumbnail), :class => 'img-responsive'), post %>
+                    <div class="hover">
+                        <%= link_to image_tag(post.image.url(:thumbnail), :class => 'img-responsive'), post %>
+                    </div>
                     <div class="info-card col-xs-10 col-xs-offset-1">
                         <h3> <%= link_to post.title, post %> </h3>
                         <p class="body"><%=strip_tags Markdown.new( post.body.truncate(300, separator: /\s/)).to_html %></p>
