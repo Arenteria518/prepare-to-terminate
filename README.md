@@ -1,8 +1,10 @@
 ## Prepare To Terminate
+Prepare to terminate is a Science Fiction blog created with Ruby on Rails.
+
 -Rails 4.2.4
+
 -Ruby 2.2.1
 
-Prepare to terminate is a Science Fiction blog created with Ruby on Rails.
 ####Features included in PTT:
 - authentication with devise 
 - deployed on heroku
